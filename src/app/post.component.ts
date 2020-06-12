@@ -9,11 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostComponent  {
   md;
+  mds : string[] = [];
+
   @Input() name: string;
   constructor(private http:HttpClient) { }
 
   async ngOnInit() {
-    this.md = await this.http.get(`/assets/posts/1.md`, { responseType: 'text'}).toPromise();
+    this.md = await this.http.get(`/assets/posts/2.md`, { responseType: 'text'}).toPromise();
     console.log(this.md)
+
+    
     }
 }
