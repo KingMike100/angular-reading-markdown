@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post.component';
 import { HttpClientModule} from '@angular/common/http';
+import { MarkdownModule } from 'ngx-markdown';
+
 import { 
   Routes, 
   RouterModule, 
@@ -17,6 +19,7 @@ const routes:Routes = [
 @NgModule({
   imports: [ 
     HttpClientModule, 
+    MarkdownModule.forRoot(),
     RouterModule.forRoot(routes), 
     BrowserModule, 
     FormsModule ],

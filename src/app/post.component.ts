@@ -14,5 +14,6 @@ export class PostComponent  {
 
   async ngOnInit() {
     this.md = await this.http.get(`/assets/posts/1.md`, { responseType: 'text'}).toPromise();
+    console.log(this.md)
     }
 }
